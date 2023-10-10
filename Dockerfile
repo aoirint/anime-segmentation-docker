@@ -5,6 +5,7 @@ ARG BASE_RUNTIME_IMAGE=nvidia/cuda:11.6.2-cudnn8-devel-ubuntu20.04
 FROM ${BASE_IMAGE} AS python-env
 
 ARG DEBIAN_FRONTEND=noninteractive
+ARG PIP_NO_CACHE_DIR=1
 ARG PYENV_VERSION=v2.3.28
 ARG PYTHON_VERSION=3.10.13
 
@@ -51,6 +52,7 @@ EOF
 FROM ${BASE_RUNTIME_IMAGE} AS runtime-env
 
 ARG DEBIAN_FRONTEND=noninteractive
+ARG PIP_NO_CACHE_DIR=1
 ENV PYTHONUNBUFFERED=1
 ENV PATH=/home/user/.local/bin:/opt/python/bin:${PATH}
 
