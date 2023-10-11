@@ -80,7 +80,7 @@ RUN <<EOF
 EOF
 
 ARG ANI_SEG_URL=https://github.com/SkyTNT/anime-segmentation
-ARG ANI_SEG_VERSION=2373527d745755fbe2987ba146d9326fed8e8881
+ARG ANI_SEG_VERSION=cc232e58183b922d125e4dc370bed7c7c41a5f7a
 
 RUN <<EOF
     set -eu
