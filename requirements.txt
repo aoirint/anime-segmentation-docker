@@ -6,7 +6,7 @@
 #
 --extra-index-url https://download.pytorch.org/whl/cu116
 
-aiohttp==3.8.6
+aiohttp==3.9.0
     # via fsspec
 aiosignal==1.3.1
     # via aiohttp
@@ -17,15 +17,15 @@ attrs==23.1.0
 certifi==2023.7.22
     # via requests
 charset-normalizer==3.3.0
-    # via
-    #   aiohttp
-    #   requests
+    # via requests
 frozenlist==1.4.0
     # via
     #   aiohttp
     #   aiosignal
 fsspec[http]==2023.9.2
-    # via pytorch-lightning
+    # via
+    #   fsspec
+    #   pytorch-lightning
 idna==3.4
     # via
     #   requests
