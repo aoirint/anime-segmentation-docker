@@ -23,7 +23,9 @@ frozenlist==1.4.0
     #   aiohttp
     #   aiosignal
 fsspec[http]==2023.10.0
-    # via pytorch-lightning
+    # via
+    #   fsspec
+    #   pytorch-lightning
 idna==3.6
     # via
     #   requests
@@ -50,7 +52,7 @@ packaging==23.2
     # via
     #   lightning-utilities
     #   pytorch-lightning
-pillow==10.1.0
+pillow==10.2.0
     # via
     #   -r requirements.in
     #   torchvision
