@@ -52,7 +52,6 @@ EOF
 FROM ${BASE_RUNTIME_IMAGE} AS runtime-env
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG PIP_NO_CACHE_DIR=1
 ENV PYTHONUNBUFFERED=1
 ENV PATH=/home/user/.local/bin:/opt/python/bin:${PATH}
 
@@ -94,11 +93,19 @@ RUN <<EOF
 EOF
 
 WORKDIR /code/anime-segmentation
-ADD ./requirements.txt /code/anime-segmentation/
+
 RUN <<EOF
     set -eu
 
-    gosu user pip3 install -r ./requirements.txt
+    mkdir -p /home/user/.cache/pip
+    chown -R user:user /home/user/.cache/pip
+EOF
+
+ADD ./requirements.txt /code/anime-segmentation/
+RUN --mount=type=cache,uid=1000,gid=1000,target=/home/user/.cache/pip <<EOF
+    set -eu
+
+    gosu user pip install -r ./requirements.txt
 EOF
 
 ENTRYPOINT [ "gosu", "user", "python3", "inference.py" ]
