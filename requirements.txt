@@ -51,7 +51,7 @@ packaging==23.2
     #   lightning-utilities
     #   pytorch-lightning
     #   torchmetrics
-pillow==10.2.0
+pillow==10.3.0
     # via
     #   -r requirements.in
     #   torchvision
