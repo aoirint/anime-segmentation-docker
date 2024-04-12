@@ -24,7 +24,7 @@ frozenlist==1.4.1
     #   aiosignal
 fsspec[http]==2024.2.0
     # via pytorch-lightning
-idna==3.6
+idna==3.7
     # via
     #   requests
     #   yarl
