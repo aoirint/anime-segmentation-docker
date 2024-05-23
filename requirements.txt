@@ -59,7 +59,7 @@ pytorch-lightning==2.2.4
     # via -r requirements.in
 pyyaml==6.0.1
     # via pytorch-lightning
-requests==2.31.0
+requests==2.32.0
     # via torchvision
 scipy==1.13.0
     # via -r requirements.in
