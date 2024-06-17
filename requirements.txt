@@ -81,7 +81,7 @@ typing-extensions==4.12.0
     #   pytorch-lightning
     #   torch
     #   torchvision
-urllib3==2.2.1
+urllib3==2.2.2
     # via requests
 yarl==1.9.4
     # via aiohttp
